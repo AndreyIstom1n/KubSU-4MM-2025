@@ -1,0 +1,36 @@
+version: '3'
+
+networks:
+  overlay:
+  
+volumes:
+  pg_data:
+  
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    networks:
+      - overlay
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: unless-stopped
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - '15432:80'
+    networks:
+      - overlay
+      
