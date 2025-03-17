@@ -18,9 +18,18 @@ repositories {
 }
 
 dependencies {
+	// Spring
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Telegram
+	implementation 'org.telegram:telegrambots:6.9.0'
+	implementation 'org.telegram:telegrambots-longpolling:8.0.0'
+	implementation 'org.telegram:telegrambots-client:8.0.0'
+
+	// AI
+	implementation 'com.openai:openai-java:0.34.1'
 }
 
 tasks.named('test') {
