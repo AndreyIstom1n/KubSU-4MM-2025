@@ -11,7 +11,6 @@ import ru.kubsu.telegrambot.bot.MyAmazingBot;
 public class TelegrambotApplication {
 
 	private static final String TELEGRAM_BOT_TOKEN = "7983066682:AAGdJrGsDJjQu_gufxi5pOqTwUJCix8EjfI";
-
 	public static void main(String[] args) throws Exception {
 		// Spring
 		SpringApplication.run(TelegrambotApplication.class, args);
