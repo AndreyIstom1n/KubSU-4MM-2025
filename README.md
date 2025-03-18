@@ -2,8 +2,14 @@
 
 Hello, World!
 
-## Postgres & PgAdmin in Docker
+## Java Spring Service
 
+```bash
+./gradlew clean build
+./gradlew bootRun
+```
+
+## Postgres & PgAdmin in Docker
 ```bash
 # To run:
 docker compose -f postgres.yml up -d

@@ -1,3 +1,14 @@
 spring:
   application:
-    name: telegrambot
+    name: "Telegram AI Bot"
+  config:
+    import: file:.env[.properties]
+
+custom:
+  ai:
+    deepseek:
+      url: "https://api.deepseek.com/chat/completions"
+      token: ${DEEPSEEK_AI_TOKEN}
+  telegram:
+    bot:
+      token: ${TELEGRAM_BOT_TOKEN}
